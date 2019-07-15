@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="babel7,node es6,">
+  <meta name="keywords" content="Vue,Vue原理,">
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="1. 安装依赖1npm i --save-dev @babel/core @babel/register @babel/plugin-proposal-class-properties @babel/plugin-transform-async-to-generator @babel/plugin-transform-modules-commonjs  2. 配置.babelrc文件1234567">
-<meta name="keywords" content="babel7,node es6">
+<meta name="keywords" content="Vue,Vue原理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="babel7搭建node es6环境">
-<meta property="og:url" content="http://yoursite.com/2019/07/15/babel7搭建node-es6环境/index.html">
+<meta property="og:title" content="一图看懂Vue数据绑定原理">
+<meta property="og:url" content="http://yoursite.com/2019/07/15/一图看懂Vue数据绑定原理/index.html">
 <meta property="og:site_name" content="seawind8888">
-<meta property="og:description" content="1. 安装依赖1npm i --save-dev @babel/core @babel/register @babel/plugin-proposal-class-properties @babel/plugin-transform-async-to-generator @babel/plugin-transform-modules-commonjs  2. 配置.babelrc文件1234567">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-15T06:24:44.735Z">
+<meta property="og:image" content="https://i.loli.net/2019/07/15/5d2c20df68a3346321.jpg">
+<meta property="og:updated_time" content="2019-07-15T06:45:17.066Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="babel7搭建node es6环境">
-<meta name="twitter:description" content="1. 安装依赖1npm i --save-dev @babel/core @babel/register @babel/plugin-proposal-class-properties @babel/plugin-transform-async-to-generator @babel/plugin-transform-modules-commonjs  2. 配置.babelrc文件1234567">
+<meta name="twitter:title" content="一图看懂Vue数据绑定原理">
+<meta name="twitter:image" content="https://i.loli.net/2019/07/15/5d2c20df68a3346321.jpg">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/15/babel7搭建node-es6环境/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/15/一图看懂Vue数据绑定原理/">
 
 
 
 
 
-  <title>babel7搭建node es6环境 | seawind8888</title>
+  <title>一图看懂Vue数据绑定原理 | seawind8888</title>
   
 
 
@@ -233,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/babel7搭建node-es6环境/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/一图看懂Vue数据绑定原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="seawind8888">
@@ -250,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">babel7搭建node es6环境</h1>
+          <h1 class="post-title" itemprop="name headline">一图看懂Vue数据绑定原理</h1>
         
 
         <div class="post-meta">
@@ -262,7 +261,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-15T14:21:36+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-15T14:43:25+08:00">
                 2019-07-15
               </time>
             
@@ -300,17 +299,7 @@
       
 
       
-        <h3 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1. 安装依赖"></a>1. 安装依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev @babel/core @babel/register @babel/plugin-proposal-class-properties @babel/plugin-transform-async-to-generator @babel/plugin-transform-modules-commonjs</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-配置-babelrc文件"><a href="#2-配置-babelrc文件" class="headerlink" title="2. 配置.babelrc文件"></a>2. 配置.babelrc文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"plugins"</span>: [</span><br><span class="line">      <span class="string">"@babel/plugin-transform-async-to-generator"</span>,</span><br><span class="line">      <span class="string">"@babel/plugin-transform-modules-commonjs"</span>,</span><br><span class="line">      <span class="string">"@babel/plugin-proposal-class-properties"</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-写入口文件index-js"><a href="#3-写入口文件index-js" class="headerlink" title="3. 写入口文件index.js"></a>3. 写入口文件index.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">require(&apos;@babel/register&apos;);</span><br><span class="line">require(&apos;./app&apos;) // 要运行的文件</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-启动"><a href="#4-启动" class="headerlink" title="4. 启动"></a>4. 启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node index.js</span><br></pre></td></tr></table></figure>
-
-<h5 id="附git-demo地址"><a href="#附git-demo地址" class="headerlink" title="附git demo地址"></a>附git demo地址</h5><blockquote>
-<p><a href="https://github.com/seawind8888/node-babel7-es6" target="_blank" rel="noopener">https://github.com/seawind8888/node-babel7-es6</a></p>
-</blockquote>
+        <p><img src="https://i.loli.net/2019/07/15/5d2c20df68a3346321.jpg" alt="image"></p>
 
       
     </div>
@@ -328,9 +317,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/babel7/" rel="tag"># babel7</a>
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
           
-            <a href="/tags/node-es6/" rel="tag"># node es6</a>
+            <a href="/tags/Vue原理/" rel="tag"># Vue原理</a>
           
         </div>
       
@@ -343,15 +332,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/07/15/babel7搭建node-es6环境/" rel="next" title="babel7搭建node es6环境">
+                <i class="fa fa-chevron-left"></i> babel7搭建node es6环境
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/15/一图看懂Vue数据绑定原理/" rel="prev" title="一图看懂Vue数据绑定原理">
-                一图看懂Vue数据绑定原理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -403,17 +392,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -464,22 +444,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装依赖"><span class="nav-number">1.</span> <span class="nav-text">1. 安装依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置-babelrc文件"><span class="nav-number">2.</span> <span class="nav-text">2. 配置.babelrc文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-写入口文件index-js"><span class="nav-number">3.</span> <span class="nav-text">3. 写入口文件index.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-启动"><span class="nav-number">4.</span> <span class="nav-text">4. 启动</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#附git-demo地址"><span class="nav-number">4.0.1.</span> <span class="nav-text">附git demo地址</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

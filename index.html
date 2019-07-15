@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang>
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="seawind8888">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
+<meta property="og:site_name" content="seawind8888">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="seawind8888">
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-  <title>Hexo</title>
+  <title>seawind8888</title>
   
 
 
@@ -133,7 +133,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -152,7 +152,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">seawind8888</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/24/test/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/babel7搭建node-es6环境/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -238,7 +238,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="seawind8888">
     </span>
 
     
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/24/test/" itemprop="url">test</a></h1>
+                <a class="post-title-link" href="/2019/07/15/babel7搭建node-es6环境/" itemprop="url">babel7搭建node es6环境</a></h1>
         
 
         <div class="post-meta">
@@ -260,8 +260,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-24T16:54:07+08:00">
-                2019-06-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-15T14:21:36+08:00">
+                2019-07-15
               </time>
             
 
@@ -300,7 +300,18 @@
       
         
           
-            
+            <h3 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1. 安装依赖"></a>1. 安装依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev @babel/core @babel/register @babel/plugin-proposal-class-properties @babel/plugin-transform-async-to-generator @babel/plugin-transform-modules-commonjs</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-配置-babelrc文件"><a href="#2-配置-babelrc文件" class="headerlink" title="2. 配置.babelrc文件"></a>2. 配置.babelrc文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"plugins"</span>: [</span><br><span class="line">      <span class="string">"@babel/plugin-transform-async-to-generator"</span>,</span><br><span class="line">      <span class="string">"@babel/plugin-transform-modules-commonjs"</span>,</span><br><span class="line">      <span class="string">"@babel/plugin-proposal-class-properties"</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-写入口文件index-js"><a href="#3-写入口文件index-js" class="headerlink" title="3. 写入口文件index.js"></a>3. 写入口文件index.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">require(&apos;@babel/register&apos;);</span><br><span class="line">require(&apos;./app&apos;) // 要运行的文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-启动"><a href="#4-启动" class="headerlink" title="4. 启动"></a>4. 启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node index.js</span><br></pre></td></tr></table></figure>
+
+<h5 id="附git-demo地址"><a href="#附git-demo地址" class="headerlink" title="附git demo地址"></a>附git demo地址</h5><blockquote>
+<p><a href="https://github.com/seawind8888/node-babel7-es6" target="_blank" rel="noopener">https://github.com/seawind8888/node-babel7-es6</a></p>
+</blockquote>
+
           
         
       
@@ -389,6 +400,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>

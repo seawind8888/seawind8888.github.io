@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="weapp,小程序,koa2,mongodb,">
 
 
 
@@ -79,13 +79,23 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="seawind8888">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="近期业务用到微信登陆并同步mongo数据库，但目前微信官方只给了wafer2-quickstart-nodejs这个koa2+mysql方案，google+git也并没有找到轮子或方案，就自己写了个轮子（附小程序demo）地址：https://github.com/seawind8888/weapp-node-mongo-scaffold 同步流程微信官方文档只给了微信登录流程图，但并没有给出同步">
+<meta name="keywords" content="weapp,小程序,koa2,mongodb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="koa2+mongo实现小程序同步登陆入库（附轮子）">
+<meta property="og:url" content="http://yoursite.com/2019/07/19/koa2-mongo实现小程序同步登陆入库（附轮子）/index.html">
 <meta property="og:site_name" content="seawind8888">
+<meta property="og:description" content="近期业务用到微信登陆并同步mongo数据库，但目前微信官方只给了wafer2-quickstart-nodejs这个koa2+mysql方案，google+git也并没有找到轮子或方案，就自己写了个轮子（附小程序demo）地址：https://github.com/seawind8888/weapp-node-mongo-scaffold 同步流程微信官方文档只给了微信登录流程图，但并没有给出同步">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1395531-60fa0ef865b5a536.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1395531-bf0d4177d3c5f15b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1395531-2058cb7f27124d8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1395531-107aa20f6cdbb6e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-07-19T09:47:30.839Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="seawind8888">
+<meta name="twitter:title" content="koa2+mongo实现小程序同步登陆入库（附轮子）">
+<meta name="twitter:description" content="近期业务用到微信登陆并同步mongo数据库，但目前微信官方只给了wafer2-quickstart-nodejs这个koa2+mysql方案，google+git也并没有找到轮子或方案，就自己写了个轮子（附小程序demo）地址：https://github.com/seawind8888/weapp-node-mongo-scaffold 同步流程微信官方文档只给了微信登录流程图，但并没有给出同步">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1395531-60fa0ef865b5a536.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -115,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/19/koa2-mongo实现小程序同步登陆入库（附轮子）/">
 
 
 
 
 
-  <title>seawind8888</title>
+  <title>koa2+mongo实现小程序同步登陆入库（附轮子） | seawind8888</title>
   
 
 
@@ -140,8 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +223,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +255,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/19/koa2-mongo实现小程序同步登陆入库（附轮子）/" itemprop="url">koa2+mongo实现小程序同步登陆入库（附轮子）</a></h1>
+          <h1 class="post-title" itemprop="name headline">koa2+mongo实现小程序同步登陆入库（附轮子）</h1>
         
 
         <div class="post-meta">
@@ -298,9 +305,7 @@
       
 
       
-        
-          
-            <p>近期业务用到微信登陆并同步mongo数据库，但目前微信官方只给了<a href="https://link.jianshu.com/?t=https://github.com/tencentyun/wafer2-quickstart-nodejs" target="_blank" rel="noopener">wafer2-quickstart-nodejs</a>这个koa2+mysql方案，google+git也并没有找到轮子或方案，就自己写了个轮子（附小程序demo）<br>地址：<a href="https://github.com/seawind8888/weapp-node-mongo-scaffold" target="_blank" rel="noopener">https://github.com/seawind8888/weapp-node-mongo-scaffold</a></p>
+        <p>近期业务用到微信登陆并同步mongo数据库，但目前微信官方只给了<a href="https://link.jianshu.com/?t=https://github.com/tencentyun/wafer2-quickstart-nodejs" target="_blank" rel="noopener">wafer2-quickstart-nodejs</a>这个koa2+mysql方案，google+git也并没有找到轮子或方案，就自己写了个轮子（附小程序demo）<br>地址：<a href="https://github.com/seawind8888/weapp-node-mongo-scaffold" target="_blank" rel="noopener">https://github.com/seawind8888/weapp-node-mongo-scaffold</a></p>
 <h3 id="同步流程"><a href="#同步流程" class="headerlink" title="同步流程"></a>同步流程</h3><p>微信官方文档只给了<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html" target="_blank" rel="noopener">微信登录流程图</a>，但并没有给出<strong>同步数据库</strong>登录的流程。并且各种openId、sessionKey、iv等相关的鉴权字段也是搞得人很懵逼，按照自己轮流程做了个图，供参考<br><img src="https://upload-images.jianshu.io/upload_images/1395531-60fa0ef865b5a536.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
 <h3 id="效果实现"><a href="#效果实现" class="headerlink" title="效果实现"></a>效果实现</h3><blockquote>
 <p>先启动<a href="https://github.com/seawind8888/weapp-node-mongo-scaffold" target="_blank" rel="noopener">项目</a></p>
@@ -321,8 +326,6 @@
 <h3 id="同步实现逻辑"><a href="#同步实现逻辑" class="headerlink" title="同步实现逻辑"></a>同步实现逻辑</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line">loginAction = async (ctx) =&gt; &#123; </span><br><span class="line">    // 调用/user/login</span><br><span class="line">    const &#123;</span><br><span class="line">      encryptedData,</span><br><span class="line">      code,</span><br><span class="line">      iv</span><br><span class="line">    &#125; = ctx.query</span><br><span class="line">    const &#123;</span><br><span class="line">      AppID,</span><br><span class="line">      AppSecret</span><br><span class="line">    &#125; = config.weapp</span><br><span class="line">    // 开始获取openId &amp;&amp; session_key</span><br><span class="line">    const resultData = await this.getAppId(&#123;</span><br><span class="line">      appid: AppID,</span><br><span class="line">      secret: AppSecret,</span><br><span class="line">      code: code</span><br><span class="line">    &#125;);</span><br><span class="line">    // 解密微信签名，获取用户信息</span><br><span class="line">    const decode = new WXBizDataCrypt(AppID, resultData.session_key)</span><br><span class="line">    const userInfo = decode.decryptData(encryptedData, iv)</span><br><span class="line"></span><br><span class="line">    // 引入小程序用户的model</span><br><span class="line">    const WeChatUser = mongoose.model(&apos;User&apos;);</span><br><span class="line">    </span><br><span class="line">    // 查询用户信息</span><br><span class="line">    await WeChatUser.findOne(&#123;</span><br><span class="line">        openid: resultData.openid</span><br><span class="line">      &#125;)</span><br><span class="line">      .exec()</span><br><span class="line">      .then(async result =&gt; &#123;</span><br><span class="line">       </span><br><span class="line">        // 设置token格式</span><br><span class="line">        const userToken = &#123;</span><br><span class="line">          openid: resultData.openid</span><br><span class="line">        &#125;</span><br><span class="line">        if (!result) &#123;</span><br><span class="line">          // 首次登录生成token, 有效期为24小时​</span><br><span class="line">          const token = jwt.sign(userToken, secret, &#123;</span><br><span class="line">            expiresIn: 60 * 60 * 24</span><br><span class="line">          &#125;)</span><br><span class="line">          const NewWechatUser = new WeChatUser(&#123;</span><br><span class="line">            // 用户信息入库</span><br><span class="line">            avatar: userInfo.avatarUrl,</span><br><span class="line">            nickName: userInfo.nickName,</span><br><span class="line">            openid: resultData.openid,</span><br><span class="line">            token: token</span><br><span class="line">          &#125;);</span><br><span class="line">          try &#123;</span><br><span class="line">            const _save = await NewWechatUser.save()</span><br><span class="line">            console.log(&apos;[mongoSave]&apos;, _save)</span><br><span class="line">               //成功返回code=200，并返回成sessionKey</span><br><span class="line">            ctx.body = &#123;</span><br><span class="line">              statusCode: 200,</span><br><span class="line">              message: &apos;登录成功, 用户信息入库成功&apos;,</span><br><span class="line">              Token: token,</span><br><span class="line">              sessionKey: resultData.session_key</span><br><span class="line">            &#125;;</span><br><span class="line">          &#125; catch (error) &#123;   //失败返回code=500，并返回错误信息 </span><br><span class="line">            console.log(&apos;[tokenSave]&apos;, error)</span><br><span class="line">            ctx.body = &#123;</span><br><span class="line">              statusCode: 500,</span><br><span class="line">              message: &apos;参数错误&apos;,</span><br><span class="line">              data: error</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">           </span><br><span class="line">        &#125; else &#123; // 已添加token</span><br><span class="line">          const token = result.token</span><br><span class="line">          try &#123;</span><br><span class="line">            // token校验</span><br><span class="line">            await jwt.verify(token, secret)</span><br><span class="line">            ctx.body = &#123;</span><br><span class="line">              statusCode: 200,</span><br><span class="line">              message: &apos;登录成功，用户已入库&apos;,</span><br><span class="line">              Token: token,</span><br><span class="line">              sessionKey: resultData.session_key</span><br><span class="line">            &#125;;</span><br><span class="line">          &#125; catch (err) &#123;</span><br><span class="line">            if (err &amp;&amp; err.name == &apos;TokenExpiredError&apos;) &#123;</span><br><span class="line">               // token失效</span><br><span class="line">              const token = jwt.sign(userToken, secret, &#123;</span><br><span class="line">                expiresIn: 60 * 60 * 24</span><br><span class="line">              &#125;)</span><br><span class="line">              // 更新token</span><br><span class="line">              </span><br><span class="line">              const _update = WeChatUser.updateOne(secret, token)</span><br><span class="line">              console.log(&apos;[mongoUpdate]&apos;, _update)</span><br><span class="line">              ctx.body = &#123;</span><br><span class="line">                statusCode: 200,</span><br><span class="line">                message: &apos;登录成功，Token更新成功&apos;,</span><br><span class="line">                Token: token,</span><br><span class="line">                sessionKey: resultData.session_key</span><br><span class="line">              &#125;;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">              console.log(&apos;[tokenVerify]&apos;, error)</span><br><span class="line">              ctx.body = &#123;</span><br><span class="line">                statusCode: 500,</span><br><span class="line">                message: &apos;服务器内部错误&apos;,</span><br><span class="line">                data: error</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
 
-          
-        
       
     </div>
     
@@ -337,263 +340,42 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/next-js-window-is-not-defind-解决方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="seawind8888">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="seawind8888">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/15/next-js-window-is-not-defind-解决方法/" itemprop="url">next.js - window is not defind 解决方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-15T15:03:40+08:00">
-                2019-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/weapp/" rel="tag"># weapp</a>
           
-            
+            <a href="/tags/小程序/" rel="tag"># 小程序</a>
           
-
+            <a href="/tags/koa2/" rel="tag"># koa2</a>
           
+            <a href="/tags/mongodb/" rel="tag"># mongodb</a>
           
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>使用next.js在引入其他组件或者模块可能会出现报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ReferenceError: window is not defined</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>使用next动态引入模块或组件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import &lt;模块名&gt; from &apos;next/dynamic&apos;;</span><br><span class="line">const Module = dynamic(</span><br><span class="line">    import(&apos;&lt;模块名&gt;&apos;),</span><br><span class="line">    &#123; ssr: false &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-<p>使用模块或组件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Module&gt;</span><br></pre></td></tr></table></figure>
-
-<p>or</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Module()</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/一图看懂Vue数据绑定原理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="seawind8888">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="seawind8888">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/15/一图看懂Vue数据绑定原理/" itemprop="url">一图看懂Vue数据绑定原理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-15T14:43:25+08:00">
-                2019-07-15
-              </time>
+              <a href="/2019/07/15/next-js-window-is-not-defind-解决方法/" rel="next" title="next.js - window is not defind 解决方法">
+                <i class="fa fa-chevron-left"></i> next.js - window is not defind 解决方法
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p><img src="https://i.loli.net/2019/07/15/5d2c20df68a3346321.jpg" alt="image"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -603,140 +385,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/babel7搭建node-es6环境/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="seawind8888">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="seawind8888">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/15/babel7搭建node-es6环境/" itemprop="url">babel7搭建node es6环境</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-15T14:21:36+08:00">
-                2019-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1. 安装依赖"></a>1. 安装依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev @babel/core @babel/register @babel/plugin-proposal-class-properties @babel/plugin-transform-async-to-generator @babel/plugin-transform-modules-commonjs</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-配置-babelrc文件"><a href="#2-配置-babelrc文件" class="headerlink" title="2. 配置.babelrc文件"></a>2. 配置.babelrc文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"plugins"</span>: [</span><br><span class="line">      <span class="string">"@babel/plugin-transform-async-to-generator"</span>,</span><br><span class="line">      <span class="string">"@babel/plugin-transform-modules-commonjs"</span>,</span><br><span class="line">      <span class="string">"@babel/plugin-proposal-class-properties"</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-写入口文件index-js"><a href="#3-写入口文件index-js" class="headerlink" title="3. 写入口文件index.js"></a>3. 写入口文件index.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">require(&apos;@babel/register&apos;);</span><br><span class="line">require(&apos;./app&apos;) // 要运行的文件</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-启动"><a href="#4-启动" class="headerlink" title="4. 启动"></a>4. 启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node index.js</span><br></pre></td></tr></table></figure>
-
-<h5 id="附git-demo地址"><a href="#附git-demo地址" class="headerlink" title="附git demo地址"></a>附git demo地址</h5><blockquote>
-<p><a href="https://github.com/seawind8888/node-babel7-es6" target="_blank" rel="noopener">https://github.com/seawind8888/node-babel7-es6</a></p>
-</blockquote>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -744,6 +397,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -764,8 +421,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -816,6 +482,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#同步流程"><span class="nav-number">1.</span> <span class="nav-text">同步流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果实现"><span class="nav-number">2.</span> <span class="nav-text">效果实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步实现逻辑"><span class="nav-number">3.</span> <span class="nav-text">同步实现逻辑</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -949,6 +631,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
